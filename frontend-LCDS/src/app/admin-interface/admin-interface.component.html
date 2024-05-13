@@ -1,0 +1,8 @@
+<h1>Connecté en tant que ADMIN</h1>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px">
+  <app-admin-car-items-mozaik
+    *ngFor="let singleCarItem of carsItems$ | async"
+    [car]="singleCarItem"
+  ></app-admin-car-items-mozaik>
+</div>

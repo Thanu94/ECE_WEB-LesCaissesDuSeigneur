@@ -1,0 +1,29 @@
+<div class="mozaikCar">
+  <h1>{{ car.brand }} - {{ car.model }}</h1>
+  <!-- <p>Mis en ligne le {{ car.createdDate | date }}</p> -->
+  <div>
+    <img
+      [src]="car.imageURL"
+      [alt]="car.brand + ' - ' + car.model"
+      height="200px"
+    />
+  </div>
+
+  <div>
+    <p>Kilométrage : {{ car.mileage }} Kms</p>
+    <div>
+      <h3 style="color: red">{{ car.price }} €</h3>
+    </div>
+  </div>
+
+  <div style="display: flex">
+    <button (click)="openAnnonce(car.id)">Voir l'annonce</button>
+    <button (click)="openAnnonce(car.id)">Modifier l'annonce</button>
+    <button
+      style="color: white; background-color: red"
+      (click)="deleteCar(car.id)"
+    >
+      Supprimer l'annonce
+    </button>
+  </div>
+</div>

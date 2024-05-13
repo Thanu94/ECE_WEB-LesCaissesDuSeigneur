@@ -1,0 +1,45 @@
+.PresentationText{
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; 
+    padding: 40px;
+}
+
+// bouton 'voir plus de véhicules'
+
+.more-vehicules-div{
+
+    display: flex;
+    flex-direction: row-reverse;
+    margin-block: 5%;
+    margin-inline: 10%;
+
+
+    .more-vehicules {
+        padding: 12px 24px;
+        background-color: #910404; 
+        color: white; 
+        font-size: 16px; 
+        font-weight: bold; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        outline: none; 
+        transition: all 0.3s ease; 
+    }
+
+    .more-vehicules:hover {
+        background-color: #000000; 
+        box-shadow: 0 8px 16px 0 rgba(32, 0, 0, 0.2); 
+    }
+
+    .more-vehicules:focus {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); 
+    }
+
+    .more-vehicules:active {
+        background-color: #ffffff; 
+        box-shadow: 0 5px 10px 0 rgb(0, 0, 0);
+    }
+}

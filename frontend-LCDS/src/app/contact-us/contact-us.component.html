@@ -1,0 +1,50 @@
+<div class="contact-container">
+  <div class="contact-info">
+    <h2>Contactez-nous</h2>
+    <p><strong>LCDS</strong> Les Caisses Du Seigneur</p>
+    <p><strong>Adresse:</strong> 10 Rue Sextius Michel, 75015 Paris</p>
+    <p><strong>Téléphone:</strong> +33 1 23 45 67 89</p>
+    <p><strong>Email:</strong> contact&#64;lsds.fr</p>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21002.93034570049!2d2.2504570743163956!3d48.85122519999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b4f58251b%3A0x167f5a60fb94aa76!2sECE%20-%20Ecole%20d&#39;ing%C3%A9nieurs%20-%20Campus%20de%20Paris!5e0!3m2!1sfr!2sfr!4v1715481901803!5m2!1sfr!2sfr"
+        width="400"
+        height="300"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+  <div class="contact-form">
+    <h2>Envoyez un message</h2>
+    <form
+      #contactFormDetails="ngForm"
+      (ngSubmit)="onSubmitContactForm(contactFormDetails)"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Votre nom"
+        [(ngModel)]="contactFormData.name"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Votre email"
+        [(ngModel)]="contactFormData.email"
+        required
+      />
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="Votre message"
+        [(ngModel)]="contactFormData.message"
+        required
+      ></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</div>

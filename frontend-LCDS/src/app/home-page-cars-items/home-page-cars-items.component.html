@@ -1,0 +1,8 @@
+<div
+  style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px"
+>
+  <app-mosaik-car
+    *ngFor="let singleHomePageCarItem of homePageCarsItems$ | async"
+    [car]="singleHomePageCarItem"
+  ></app-mosaik-car>
+</div>

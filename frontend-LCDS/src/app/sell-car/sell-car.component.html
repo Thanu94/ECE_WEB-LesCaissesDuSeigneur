@@ -1,0 +1,114 @@
+<div class="form-container">
+  <form #sellCarForm="ngForm" (ngSubmit)="onSubmitSellForm(sellCarForm)">
+    <h2>Remplissez le formulaire suivant pour mettre en vente votre voiture</h2>
+
+    <label for="brand">Marque</label>
+    <input
+      type="text"
+      id="brand"
+      required
+      [(ngModel)]="newCarDetails.brand"
+      name="newCarDetails"
+    />
+
+    <label for="model">Modèle</label>
+    <input
+      type="text"
+      id="model"
+      name="model"
+      [(ngModel)]="newCarDetails.model"
+      required
+    />
+
+    <label for="annee">Année</label>
+    <input
+      type="number"
+      id="annee"
+      name="year"
+      required
+      min="1900"
+      max="2024"
+      step="1"
+      [(ngModel)]="newCarDetails.year"
+    />
+
+    <label for="kilometrage">Kilométrage</label>
+    <input
+      type="number"
+      id="kilometrage"
+      name="mileage"
+      [(ngModel)]="newCarDetails.mileage"
+      required
+    />
+
+    <label for="price">Prix</label>
+    <div style="display: flex">
+      <input
+        type="number"
+        id="price"
+        name="price"
+        [(ngModel)]="newCarDetails.price"
+        required
+      />
+      <div style="margin-top: 2%; margin-inline: 3%">€</div>
+    </div>
+
+    <label for="url">photo</label>
+    <input
+      type="url"
+      id="url"
+      name="imageURL"
+      placeholder="Veuillez sasir une url"
+      [(ngModel)]="newCarDetails.imageURL"
+    />
+
+    <label for="description">Description de votre véhicule</label>
+    <textarea
+      id="description"
+      name="description"
+      rows="4"
+      [(ngModel)]="newCarDetails.description"
+      required
+    ></textarea>
+
+    <fieldset>
+      <legend>Informations de contact du vendeur</legend>
+
+      <label for="nom">Nom</label>
+      <input
+        type="text"
+        id="nom"
+        name="sellerLastName"
+        [(ngModel)]="newCarDetails.sellerLastName"
+        required
+      />
+
+      <label for="prenom">Prénom</label>
+      <input
+        type="text"
+        id="prenom"
+        name="sellerFirstName"
+        [(ngModel)]="newCarDetails.sellerFirstName"
+        required
+      />
+
+      <label for="telephone">Téléphone</label>
+      <input
+        type="tel"
+        id="telephone"
+        name="sellerPhoneNo"
+        [(ngModel)]="newCarDetails.sellerPhoneNo"
+      />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="sellerMail"
+        [(ngModel)]="newCarDetails.sellerMail"
+      />
+    </fieldset>
+
+    <button type="submit">Publier</button>
+  </form>
+</div>

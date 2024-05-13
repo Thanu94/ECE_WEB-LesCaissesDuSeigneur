@@ -1,0 +1,46 @@
+/* Style pour le conteneur de la barre de recherche */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#search-box {
+    width: 100%;
+    padding: 10px 20px;
+    margin-right: -3px; 
+    border: 2px solid #ddd;
+    border-right: none; 
+    font-size: 16px; 
+    border-radius: 5px 0 0 5px;
+}
+
+/* Style pour le bouton de recherche */
+.search-btn {
+    padding: 10px 20px;
+    background: #fffefe;
+    border: 2px solid #000000;
+    color: rgb(254, 254, 254);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; 
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.fa-search{
+    color: white;
+}
+
+.search-btn:hover {
+    background-color: #ffffff;
+    border-color: #910404;
+}
+
+#search-box:focus, .search-btn:focus {
+    outline: none;
+    border-color: #910404;
+}
+
+#search-box:focus {
+    border-right: none;
+}

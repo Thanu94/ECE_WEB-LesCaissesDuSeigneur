@@ -1,0 +1,47 @@
+<div class="mozaikCar" *ngIf="singleCar$ | async as singleCar">
+  <div>
+    <h1>{{ singleCar.brand }} - {{ singleCar.model }}</h1>
+    <div>
+      <img
+        [src]="singleCar.imageURL"
+        [alt]="singleCar.brand + ' - ' + singleCar.model"
+        height="200px"
+      />
+    </div>
+
+    <div>
+      <div>
+        <h2 style="color: red">{{ singleCar.price }} €</h2>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p>Mise en ligne le {{ annonceDate }}</p>
+
+    <div class="description-box">
+      <h2>Descrition de l'annonce</h2>
+      <p>{{ singleCar.description }}</p>
+    </div>
+    <div
+      class="description-box"
+      style="display: flex; justify-content: space-evenly"
+    >
+      <div>
+        <strong
+          ><p>Marque : {{ singleCar.brand }}</p></strong
+        >
+        <strong
+          ><p>Model : {{ singleCar.model }}</p></strong
+        >
+      </div>
+      <div>
+        <strong
+          ><p>Année : {{ singleCar.year }}</p></strong
+        >
+        <strong
+          ><p>Kilométrage : {{ singleCar.mileage }}</p></strong
+        >
+      </div>
+    </div>
+  </div>
+</div>
